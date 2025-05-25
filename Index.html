@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlamHair Studio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f4;
+      color: #333;
+    }
+    header {
+      background: #d63384;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    img{
+      width: 100%;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://example.com/hairstyle.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+      flex-direction: column;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+    }
+    .slider {
+      width: 90%;
+      max-width: 800px;
+      margin-top: 1rem;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    
+    
+
+
+.carousel-container {
+      width: 100%;
+      max-width: 1000px;
+      
+      margin: auto;
+overflow:hidden;
+      
+    }
+
+    /* Hide all slides by default */
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    /* Make the image responsive */
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Navigation dots */
+    .dots {
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 30px;
+      background-color: red;
+      display: inline-block;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: blue;
+    }
+
+
+
+    .section {
+      padding: 2rem;
+    }
+    .services {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+   .fcard{
+     background: white;
+     border-radius: 8px;
+     box-shadow: 1px 5px 5px lightpink;
+   }
+   .user{
+
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ccc; /* Optional border */
+    
+   }
+
+    .scard {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: enter;
+    }
+
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>MAMAFULE BEATY</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Styles</a>
+      <a href="#about">About</a>
+     
+      <a href="#services">services</a>
+<a href="#testmonials">testimonials</a>
+<a href="#Appointment">Appointment</a>
+
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="home" style="background-color:lightpink; height:auto;">
+<div class="carousel-container">
+    <!-- Each image slide -->
+    <div class="slide">
+      <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="image4.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="image7.jpg" alt="Image 3">
+    </div>
+  </div>
+
+<div class="dots">
+    <span class="dot" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+  </div>
+
+<script>
+    let currentIndex = 0; // Start from the first slide
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    function showSlide(index) {
+      // Hide all slides and remove "active" class from all dots
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].classList.remove("active");
+      }
+
+      // Show the selected slide and activate the dot
+      slides[index].style.display = "block";
+      dots[index].classList.add("active");
+
+      // Update current index
+      currentIndex = index;
+    }
+
+    // Auto-show next slide every 3 seconds
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    // Initial call
+    showSlide(currentIndex);
+    setInterval(autoSlide, 3000); // Change every 3 seconds
+  </script>
+  
+</section>
+<section class="section" id="about">
+<h2>About</h2>
+
+<div class="card" style="background-color:lightpink;With:300px">
+<p>At MamaFule Beauty Saloon, we deliver excellent hair styling services at affordable prices.</p>
+
+<p/>With years of experience, our skilled team is passionate about making every woman feel confident and beautiful.</p>
+
+<p>From braids to natural styles, quality and care come first—always.</p>
+
+<p>Trusted by many, loved by all. Come experience beauty the MamaFule way.
+ </p></b>
+</div>
+
+
+  </section>  <section class="section" id="services">
+    <h2>Our Featured Styles</h2>
+    <div class="services">
+      <div class="card">
+<img src="example.jpg">
+        <h3>Braiding</h3>
+        <p>Elegant and neat protective styles.</p>
+      </div>
+      <div class="card">
+        <h3>Hair Coloring</h3>
+        <p>Bold or subtle shades to match your vibe.</p>
+      </div>
+      <div class="card">
+        <h3>Natural Hair Care</h3>
+        <p>Nurture your curls with love.</p>
+      </div>
+    </div>
+  
+
+<section class="section" id="services">
+<h2>services</h2>
+<div class="scard">
+<ul>
+<li>Hair Styling</li>
+<li>Removing</li>
+<li>Washing</li>
+<li>Follow the customer</li>
+</ul>
+</div>
+</section>
+<section class="section" id="testmonials">
+<div class="section-content">
+<div class="slider-container">
+<div class="slider-wrapper">
+<ul class="testmonial-list">
+<li Class="testmonial">
+<h2>
+Testimonials</h2>
+ <img src="user2.jpg" class="user">
+<h3 class="name">Sarah Oconer</h3>
+<i class="feedback">“Affordable prices with salon-quality results! I always leave feeling beautiful and confident.”</i>
+</li>
+<li Class="testmonial">
+ <img src="user3.jpg" class="user">
+<h3 class="name">Bitrece Oconer</h3>
+<i class="feedback">"The service is so perfect with lots of discount and time Management is good 👍"</i>
+</li>
+<li Class="testmonial">
+ <img src="user5.jpg" class="user">
+<h3 class="name">Mimaah</h3>
+<i class="feedback">"MamaFule is the only place I trust with my hair. The braids last long and the staff is super friendly!"</i>
+</li>
+<li Class="testmonial">
+ <img src="user1.jpg" class="user">
+<h3 class="name">Joharir</h3>
+<i class="feedback">“The attention to detail and professionalism is unmatched. MamaFule truly cares about your hair.”</i>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="Appointment">
+  <h2>Appointment</h2>
+  <div class="fcard">
+  
+  <form>
+    
+  <label>name:<input type="text" name="name"placeholder="name"></label></br>
+   <label>date&time:<input type="text" name="time"placeholder="00/00/0000;00:00pm/am"></label></br>
+ <label>Email:</p><input type="text" name="Email" placeholder="Email"></label></br>
+ <label>phonenumber:<input type="text" name="contact" placeholder="+255*********"> </label></br>
+ 
+  </form>
+</div>
+</section>
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@glamhair.com | Phone: (123) 456-7890</p>
+  </section>  <footer>
+    &copy; 2025 MamaFule Studio | Follow us on Instagram @mamafule.tz
+  </footer>
+</body>
+</html>
